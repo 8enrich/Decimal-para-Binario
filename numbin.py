@@ -1,3 +1,4 @@
+
 def conversor_para_binario(num):
 	digitos_inteiros = []
 	digitos_decimais = []
@@ -9,10 +10,10 @@ def conversor_para_binario(num):
 		num[1] = float(num[1])
 	while True:
 		resto = num[0] % 2
-		digitos_inteiros.append(resto)
+		digitos_inteiros.insert(0,resto)
 		quociente = num[0] // 2
-		if quociente == 1:
-			digitos_inteiros.append(quociente)
+		if quociente <= 1:
+			digitos_inteiros.insert(0,quociente)
 			break
 		num[0] = quociente
 	if len(num) != 1:
@@ -30,8 +31,11 @@ def conversor_para_binario(num):
 				break
 	digitos_inteiros = "".join(map(str, digitos_inteiros))
 	digitos_decimais = "".join(map(str, digitos_decimais))
-	digitos = digitos_inteiros + "." + digitos_decimais
-	return digitos
+	if len(num) != 1:
+		digitos = digitos_inteiros + "." + digitos_decimais
+		return digitos
+	else:
+		return digitos_inteiros
 
 
 a = input("Digite um número decimal para ser convertido para binário: ")
