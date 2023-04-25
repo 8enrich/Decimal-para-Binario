@@ -28,6 +28,7 @@ while True:
 					elif a[i] in Números:
 						x += 1
 				if x == len(a):
+					a = "".join(map(str,a))
 					print (conversor_para_binario(a))
 					break
 			base = input("Deseja alterar a base escolhida?[S/N]")
@@ -60,6 +61,7 @@ while True:
 					elif b[i] in Binários:
 						x += 1
 				if x == len(b):
+					b = "".join(map(str,b))
 					print (conversor_para_decimal(b))
 					break
 			base = input("Deseja alterar a base escolhida?[S/N]")
