@@ -54,7 +54,7 @@ def conversor_para_decimal(num):
 			digitos_decimais[i] = int(digitos_decimais[i])
 		for i in range(len(digitos_decimais)):
 			digitos_decimais[i] = digitos_decimais[i] * 2 ** (-(i + 1))
-		soma2 = sum(digitos_inteiros)
+		soma2 = sum(digitos_decimais)
 	digitos = soma1 + soma2
 	return digitos
 
