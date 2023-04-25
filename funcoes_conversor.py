@@ -57,8 +57,3 @@ def conversor_para_decimal(num):
 		soma2 = sum(digitos_decimais)
 	digitos = soma1 + soma2
 	return digitos
-
-a = input("Digite um número decimal para ser convertido para binário: ")
-print(conversor_para_binario(a))
-b = input("Digite um número binário para ser convertido para decimal: ")
-print(conversor_para_decimal(b))
