@@ -36,7 +36,29 @@ def conversor_para_binario(num):
 		return digitos
 	else:
 		return digitos_inteiros
-
+def conversor_para_decimal(num):
+	num = num.replace("."," ")
+	num = num.split()
+	digitos_inteiros = list(num[0])
+	soma2 = 0
+	expoente = len(digitos_inteiros) - 1
+	if len(num) != 1:
+		digitos_decimais = list(num[1])
+	for i in range(len(digitos_inteiros)):
+		digitos_inteiros[i] = int(digitos_inteiros[i])
+	for i in range(len(digitos_inteiros)):
+		digitos_inteiros[i] = digitos_inteiros[i] * 2 **(expoente - i)
+	soma1 = sum(digitos_inteiros)
+	if len(num) != 1:
+		for i in range(len(digitos_decimais)):
+			digitos_decimais[i] = int(digitos_decimais[i])
+		for i in range(len(digitos_decimais)):
+			digitos_decimais[i] = digitos_decimais[i] * 2 ** (-(i + 1))
+		soma2 = sum(digitos_inteiros)
+	digitos = soma1 + soma2
+	return digitos
 
 a = input("Digite um número decimal para ser convertido para binário: ")
 print(conversor_para_binario(a))
+b = input("Digite um número binário para ser convertido para decimal: ")
+print(conversor_para_decimal(b))
