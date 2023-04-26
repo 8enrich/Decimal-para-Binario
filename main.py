@@ -9,7 +9,7 @@ while True:
 	if comando == "T" or comando == "t":
 		break
 	x = 0
-	base = input("Digite a base para conversão:")
+	base = input("Digite para qual base você deseja converter:")
 	if base == "2":
 		while True:
 			x = 0
