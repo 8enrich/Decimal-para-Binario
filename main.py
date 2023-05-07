@@ -31,18 +31,23 @@ while True:
 					a = "".join(map(str,a))
 					print (conversor_para_binario(a))
 					break
-			base = input("Deseja alterar a base escolhida?[S/N]")
-			if base == "S" or base == "s":
+			while True:
+				base = input("Deseja alterar a base escolhida?[S/N]")
+				if base == "S" or base == "s":
+					break
+				elif base == "N" or base == "n":
+					base = "2"
+					break
+				elif base == "T" or base == "t":
+					comando = "T"
+					break
+				elif base == "C" or base == "c":
+					base = "2"
+					break
+				else:
+					print ("Comando desconhecido")
+			if base != "2":
 				break
-			elif base == "N" or base == "n":
-				base = "2"
-			elif base == "T" or base == "t":
-				comando = "T"
-				break
-			elif base == "C" or base == "c":
-				base = "2"
-			else:
-				print ("Comando desconhecido")
 	elif base == "10":
 		while True:
 			x = 0
@@ -64,21 +69,26 @@ while True:
 					b = "".join(map(str,b))
 					print (conversor_para_decimal(b))
 					break
-			base = input("Deseja alterar a base escolhida?[S/N]")
-			if base == "S" or base == "s":
+			while True:
+				base = input("Deseja alterar a base escolhida?[S/N]")
+				if base == "S" or base == "s":
+					break
+				elif base == "N" or base == "n":
+					base = "10"
+					break
+				elif base == "T" or base == "t":
+					comando = "T"
+					break
+				elif base == "C" or base == "c":
+					base = "10"
+					break
+				else:
+					print ("Comando desconhecido")
+			if base != "10":
 				break
-			elif base == "N" or base == "n":
-				base = "10"
-			elif base == "T" or base == "t":
-				comando = "T"
-				break
-			elif base == "C" or base == "c":
-				base = "10"
-			else:
-				print ("Comando desconhecido")
 	elif base == "T" or base == "t":
 		comando = "T"
 	elif base == "C" or base == "c":
-		print ("Nada para retornar")
+		print ("Nenhum comando para cancelar")
 	else:
 		print ("Comando desconhecido")
