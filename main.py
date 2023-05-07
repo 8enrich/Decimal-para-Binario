@@ -1,7 +1,7 @@
+from funcoes_conversor import *
 print ("Conversor de Binário/Decimal")
 print ("C para cancelar algum comando")
 print ("T para terminar")
-from funcoes_conversor import *
 Binários = ["1","0","."]
 Números = ["1","2","3","4","5","6","7","8","9","0","."]
 comando = "a"
